@@ -46,7 +46,7 @@ const TabBar = () => {
                     fontFamily: 'GoogleSansRegular'
                 }}>eUniver QR</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Settings')} className="w-[70px] flex flex-col gap-[0.3em] rounded-xl">
+            <TouchableOpacity onPress={() => navigation.push('Settings')} className="w-[70px] flex flex-col gap-[0.3em] rounded-xl">
                 <Ionicons className="text-center" name="settings-outline" size={25} color={Colors[theme].textSecondary} />
                 <Text className="w-full text-center font-sm" style={{
                     fontSize: 10,

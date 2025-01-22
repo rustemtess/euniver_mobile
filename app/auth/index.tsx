@@ -48,7 +48,7 @@ export default function AuthScreen({ navigation }: AuthScreenProps) {
           },
           headerRight(props) {
             return (
-              <TouchableOpacity onPress={() => navigation.navigate('Settings')} className="px-5">
+              <TouchableOpacity onPress={() => navigation.push('Settings')} className="px-5">
                 <Ionicons className="text-center" name="settings-outline" size={25} color={Colors[theme].textSecondary} />
             </TouchableOpacity>
             );
@@ -82,7 +82,7 @@ export default function AuthScreen({ navigation }: AuthScreenProps) {
             },
           ]} />
         <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.replace('Home')}
           style={[
             styles.button,
             {

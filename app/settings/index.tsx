@@ -1,3 +1,4 @@
+import AppConfig from "@/config";
 import { Colors } from "@/constants/Colors";
 import { ThemeContext } from "@/providers/ThemeProvider";
 import { stylesSettings } from "@/styles/settings.style";
@@ -7,6 +8,7 @@ import { Stack } from "expo-router";
 import { useContext, useState } from "react";
 import {
   Button,
+  Platform,
   SafeAreaView,
   Text,
   TouchableOpacity,
@@ -80,6 +82,11 @@ export default function SettigsScreen() {
             fontSize: 16
           }}>{isDark ? 'OFF' : 'ON'}</Text>
         </TouchableOpacity>
+      </View>
+      <View className="flex-1 flex-col justify-end">
+        <Text style={{
+          color: Colors[theme].textTertiary
+        }}>eUniver mobile for { Platform.OS.toUpperCase() } v{ AppConfig.version }</Text>
       </View>
     </SafeAreaView>
   );

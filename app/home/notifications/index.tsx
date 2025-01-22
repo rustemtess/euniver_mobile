@@ -3,7 +3,7 @@ import { ThemeContext } from "@/providers/ThemeProvider";
 import { styles } from "@/styles/style";
 import { Stack } from "expo-router";
 import { useContext } from "react";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, Text } from "react-native";
 
 export default function NotificationsScreen() {
 
@@ -15,7 +15,7 @@ export default function NotificationsScreen() {
                 styles.screenLayout,
                 {
                   backgroundColor: Colors[theme].background,
-                  justifyContent: "flex-start",
+                  justifyContent: "flex-end",
                 },
               ]}
             >
@@ -34,6 +34,7 @@ export default function NotificationsScreen() {
                   },
                 }}
               />
+              <Text>gftfggtgrgr</Text>
         </SafeAreaView>
     );
 }
